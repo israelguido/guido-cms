@@ -1,2 +1,129 @@
-<h1>Home do site</h1>
-<img src="{{ url_for('main.static', filename='HomerSimpson.webp')}}" alt="Homer" width="50">
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta name="description" content="Guido CMS - Gerencie seu conteúdo com facilidade e eficiência">
+    <meta name="author" content="Israel Guido, Henrique Guido">
+    <title>Guido CMS</title>
+{% endblock %}
+
+{% block styles %}
+    <link href="{{ url_for('main.static', filename='css/main.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#">Assine</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Busca">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Busca</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">Cadastre-se</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">Início</a>
+      <a class="p-2 link-secondary" href="#">Recursos</a>
+      <a class="p-2 link-secondary" href="#">Planos</a>
+      <a class="p-2 link-secondary" href="#">Contato</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Gerencie seu conteúdo de forma inteligente</h1>
+      <p class="lead my-3">Com o Guido CMS, você tem controle total sobre seu site ou aplicação de conteúdo, de maneira simples e eficiente.</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Saiba mais</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Destaque</strong>
+          <h3 class="mb-0">Facilidade de Uso</h3>
+          <p class="card-text mb-auto">Configure e gerencie seu conteúdo com apenas alguns cliques.</p>
+          <a href="#" class="stretched-link">Leia mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Recursos</strong>
+          <h3 class="mb-0">Personalização Total</h3>
+          <p class="mb-auto">Adapte o Guido CMS para atender exatamente às suas necessidades.</p>
+          <a href="#" class="stretched-link">Leia mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        Novidades do Guido CMS
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title">Novo Recurso: Integração com Redes Sociais</h2>
+        <p class="blog-post-meta">Dezembro 2024 por <a href="#">Equipe Guido</a></p>
+
+        <p>Com nosso novo recurso, você pode integrar facilmente suas redes sociais ao seu site, aumentando sua visibilidade e alcance.</p>
+        <p>Descubra como isso pode ajudar a expandir sua presença online e melhorar a comunicação com seu público.</p>
+      </article>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title">Melhorias no Editor de Conteúdo</h2>
+        <p class="blog-post-meta">Novembro 2024 por <a href="#">Equipe Guido</a></p>
+
+        <p>Nosso editor de conteúdo agora está mais rápido e intuitivo, garantindo que você gaste menos tempo com tarefas repetitivas.</p>
+      </article>
+
+      <nav class="blog-pagination" aria-label="Paginação">
+        <a class="btn btn-outline-primary" href="#">Mais antigos</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Mais recentes</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">Sobre o Guido CMS</h4>
+          <p class="mb-0">O Guido CMS é uma solução completa para gerenciar seu conteúdo online, oferecendo flexibilidade e desempenho.</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Arquivos</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">Dezembro 2024</a></li>
+            <li><a href="#">Novembro 2024</a></li>
+            <li><a href="#">Outubro 2024</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Siga-nos</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

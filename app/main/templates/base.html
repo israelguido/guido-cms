@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Guido CMS{% endblock %}</title>
+    {% block head %}{% endblock %}
+    <link href="{{ url_for('main.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="py-3 text-center">
+          <a href="/" class="blog-header-logo text-dark">Guido CMS</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="blog-footer">
+      <p>Desenvolvido com <a href="https://flask.palletsprojects.com/">Flask</a> por <a href="#guido-cms">Guido CMS</a>.</p>
+      <p><a href="#">Voltar ao topo</a></p>
+    </footer>
+  </body>
+</html>

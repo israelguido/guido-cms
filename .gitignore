@@ -1,0 +1,48 @@
+# Ignorar arquivos e pastas do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# Pasta de ambiente virtual
+venv/
+.env
+
+# Arquivos e pastas gerados pelo Flask
+instance/
+*.db
+*.sqlite3
+
+# Ignorar arquivos de log
+*.log
+*.out
+*.err
+
+# Ignorar arquivos e pastas do Docker
+.dockerignore
+
+# Ignorar arquivos gerados por IDEs/editores comuns
+.vscode/
+.idea/
+*.swp
+*~
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar arquivos de controle do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar arquivos de dependências geradas
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignorar configurações locais do Flask
+config.py
+instance/config.py
