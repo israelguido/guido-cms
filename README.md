@@ -39,6 +39,6 @@ Certifique-se de ter instalado:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/guido-cms.git
-   cd guido-cms
-   Make build
+   $ git clone https://github.com/seu-usuario/guido-cms.git
+   $ cd guido-cms
+   $ Make build
