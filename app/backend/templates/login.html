@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Login</h1>
+
+{% if username %}
+    <p>Welcome {{username}}</p>
+    {% else %}
+    <p>Faça Login</p>
+{% endif %}
+
+<form action="/backend/login" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{form.username.label(
+            class_="form-label"
+        )}}
+        {{form.username}}
+    </div>
+    <div>
+        {{form.password.label(
+            class_="form-label"
+        )}}
+        {{form.password}}
+    </div>
+    <div>
+        {{form.submit(
+            class_="btn btn-primary"
+        )}}
+    </div>
+</form>
+{% endblock %}

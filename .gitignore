@@ -46,3 +46,6 @@ pip-delete-this-directory.txt
 # Ignorar configurações locais do Flask
 config.py
 instance/config.py
+
+# .ignore .venv
+.venv
