@@ -42,3 +42,9 @@ Certifique-se de ter instalado:
    git clone https://github.com/seu-usuario/guido-cms.git
    cd guido-cms
    Make build
+
+   # Criar as tabelas
+   Make create_tables
+   
+   #para acessar o banco
+   Make db
