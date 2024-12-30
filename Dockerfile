@@ -10,10 +10,6 @@ COPY . /app
 # Instale as dependências
 RUN pip install --no-cache-dir -r app/requirements.txt
 
-RUN pip install flask-login
-
-RUN pip freeze > requirements.txt
-
 # Exponha a porta em que o Flask será executado
 EXPOSE 5000
 
