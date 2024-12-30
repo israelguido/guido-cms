@@ -3,6 +3,16 @@
 {% block content %}
 <h1>Login</h1>
 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for msg in messages %}
+        <li>{{ msg }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
 {% if username %}
     <p>Welcome {{username}}</p>
     {% else %}

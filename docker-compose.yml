@@ -11,6 +11,24 @@ services:
     volumes:
       - .:/app
     environment:
-      FLASK_DEBUG: 1
+      - FLASK_DEBUG=1
+      - DATABASE_URL=mysql+pymysql://guido:Guido2024@db:3306/guido
+    depends_on:
+      - db
     stdin_open: true
     tty: true
+
+  db:
+    image: mariadb:10.9
+    environment:
+      - MARIADB_DATABASE=guido
+      - MARIADB_USER=guido
+      - MARIADB_PASSWORD=Guido2024
+      - MARIADB_ROOT_PASSWORD=Guido2024
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

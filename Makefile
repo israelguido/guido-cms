@@ -1,6 +1,7 @@
 # Variáveis
 DOCKER_COMPOSE = docker-compose
-SERVICE_NAME = flask_app
+SERVICE_NAME = flask-app
+HOST_DB = db
 
 # Comandos
 build:
@@ -21,8 +22,14 @@ logs:
 exec:
 	$(DOCKER_COMPOSE) exec $(SERVICE_NAME) bash
 
+create_tables:
+	$(DOCKER_COMPOSE) exec $(SERVICE_NAME) python manage.py
+
+db:
+	$(DOCKER_COMPOSE) exec $(HOST_DB) mysql -u guido -p
+
 prune:
 	docker system prune -f
 
 req:
-	pip freeze > requirements.txt
+	pip freeze > app/requirements.txt
